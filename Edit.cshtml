@@ -1,0 +1,120 @@
+﻿@model TheatreCMS3.Areas.Prod.Models.CastMember
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Edit Cast Member</h2>
+
+
+@using (Html.BeginForm("Edit", "CastMembers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal CastMember-Create--FormContainer">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.CastMemberId)
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control CastMember-Create--FormInput", placeholder = "Enter Name" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.YearJoined, htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EditorFor(model => model.YearJoined, new { htmlAttributes = new { @class = "form-control CastMember-Create--FormInput", placeholder = "Enter Year Member Joined Cast" } })
+            @Html.ValidationMessageFor(model => model.YearJoined, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.MainRole, htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EnumDropDownListFor(model => model.MainRole, htmlAttributes: new { @class = "form-control CastMember-Create--FormInput" })
+            @Html.ValidationMessageFor(model => model.MainRole, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.Bio, htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EditorFor(model => model.Bio, new { htmlAttributes = new { @class = "form-control CastMember-Create--FormInput", placeholder = "Enter Bio" } })
+            @Html.ValidationMessageFor(model => model.Bio, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.Photo, htmlAttributes: new { @class = "control-label" })
+        <div>
+            <input type="file" name="postedFile" class="CastMember-Create--UploadButton" />
+            <img height="200" src="@Url.Action("RenderImage", new { id = Model.CastMemberId })" />
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.CurrentMember, htmlAttributes: new { @class = "control-label" })
+        <div>
+            <div class="checkbox">
+                @Html.EditorFor(model => model.CurrentMember)
+                @Html.ValidationMessageFor(model => model.CurrentMember, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.ProductionTitle, "Production Title", htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EditorFor(model => model.ProductionTitle, new { htmlAttributes = new { @class = "form-control CastMember-Create--FormInput", placeholder = "Enter Production Title" } })
+            @Html.ValidationMessageFor(model => model.ProductionTitle, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.Character, htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EditorFor(model => model.Character, new { htmlAttributes = new { @class = "form-control CastMember-Create--FormInput", placeholder = "Enter Character" } })
+            @Html.ValidationMessageFor(model => model.Character, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.CastYearLeft, htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EditorFor(model => model.CastYearLeft, new { htmlAttributes = new { @class = "form-control CastMember-Create--FormInput", placeholder = "Enter Year Member Left" } })
+            @Html.ValidationMessageFor(model => model.CastYearLeft, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        @Html.LabelFor(model => model.DebutYear, htmlAttributes: new { @class = "control-label" })
+        <div>
+            @Html.EditorFor(model => model.DebutYear, new { htmlAttributes = new { @class = "form-control CastMember-Create--FormInput", placeholder = "Enter Debut Year" } })
+            @Html.ValidationMessageFor(model => model.DebutYear, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group w-75 mx-auto">
+        <div>
+            <input type="submit" value="Save" class="btn btn-default CastMember-Create--SubmitButton" />
+        </div>
+    </div>
+    <div class="form-group w-75 mx-auto">
+        <button class="btn btn-default CastMember-Create--BackButton">
+            @Html.ActionLink("Back to List", "Index", "CastMembers", new { @class = "CastMember-Create--BackButton" })
+        </button>
+    </div>
+</div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
