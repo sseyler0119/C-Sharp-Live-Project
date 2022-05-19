@@ -16,10 +16,13 @@ I was tasked with creating a new [About](https://github.com/sseyler0119/C-Sharp-
 ### Style the Index Page
 
 The specifications for styling the [Index](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Index.cshtml) required that the “Create New” link is changed to a button and the Cast Members are displayed using Bootstrap cards that are sorted by the Production they are currently acting in. Each card includes an overlay that dims the photo as the user hovers over the image and displays Font Awesome icons for the Edit and Delete pages. The image is wrapped in a link that directs to the Details page. 
+
 ### Style the Create and Edit Pages
 For the [Create](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Create.cshtml) and [Edit](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Edit.cshtml)  pages, I added a header above the form, styled the “Submit” and “Back to List” buttons to match the website theme, included placeholders for each input field, and centered the form on the page. When each input field is clicked, the border color and background color changes to match the provided color palette. 
+
 ### Style the Delete and Details Pages
 When styling the [Delete](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Delete.cshtml) and [Details](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Details.cshtml) pages, I centered the content and made the Cast Member’s photo, name, and bio more prominent within the container. Links to “Edit”, “Back to List”, and “Delete” were changed into buttons with corresponding Font Awesome Icons that matched the color palette and include hover effects. 
+
 ![Edit and Details](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/Edit%20and%20Details%20.gif)
 
 ![Delete](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/Delete%20-%20My%20ASP.NET%20Application.gif)
@@ -57,6 +60,7 @@ namespace TheatreCMS3.Areas.Prod.Models
 }
 ```
 ![Database Table](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/DatabaseTable.png)
+
 ### Photo Storage and Retrieval
 
 ### Interactive Search Bar
