@@ -5,10 +5,10 @@
 This project is built using ASP.NET MVC and Entity Framework. I was part of a Scrum team for a two-week code sprint where we worked on an interactive website for managing the content and productions for a theater/acting company in Portland, Oregon called Theatre Vertigo. This site was intended to be a content management service for non-technical staff to manage their website content.  My team and I worked on the Production Area of the website where all productions, production photos, and cast member information is contained. 
 
 ## Front-End Stories
-All front-end stories include the color-palette provided by Theatre Vertigo and are designed to blend with the main portion of the website. Button styles, containers, and hover effects match those used in other areas of the website for consistency.
+All front-end stories include the color-palette provided by Theatre Vertigo and are designed to blend with the main portion of the website. Button styles, containers, and hover effects match those used in other areas of the website for consistency. 
 
 ### Style the About page (Main Site)
-I was tasked with creating a new [About](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/About.cshtml) page for Theatre Vertigo. I created a new view in the Home View folder for the About page and then used a mockup that was supplied by another UI/UX developer to recreate their design using HTML and CSS. 
+I was tasked with creating a new [About](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/About.cshtml) page for Theatre Vertigo. I created a new view in the Home View folder for the About page and then used a mockup that was supplied by another UI/UX developer to recreate their design using HTML and [CSS](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Site.css). 
 
 ![About Page](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/About%20-%20My%20ASP.NET%20Application.gif)
 
