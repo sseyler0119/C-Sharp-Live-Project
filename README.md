@@ -62,6 +62,44 @@ namespace TheatreCMS3.Areas.Prod.Models
 ![Database Table](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/DatabaseTable.png)
 
 ### Photo Storage and Retrieval
+```cs
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "CastMemberId,Name,YearJoined,MainRole,Bio,Photo,CurrentMember,ProductionTitle, Character,CastYearLeft,DebutYear")] CastMember castMember, HttpPostedFileBase postedFile)
+        {
+            castMember.Photo = UploadPhoto(postedFile); // convert photo to byte[], bind to castMember.Photo
+            if (ModelState.IsValid) // form is valid and file contains data
+            {
+                db.CastMembers.Add(castMember);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(castMember);
+        }
+```
+
+```cs
+        // convert photo upload to byte array
+        [HttpPost]
+        public byte[] UploadPhoto(HttpPostedFileBase postedFile)
+        {
+            byte[] bytes;
+            using(BinaryReader br = new BinaryReader(postedFile.InputStream))
+            {
+                bytes = br.ReadBytes(postedFile.ContentLength);
+            }
+            return bytes;
+        }
+
+        // convert byte[] back to image and return file to web page
+        public ActionResult RenderImage(int id)
+        {
+            CastMember castMember = db.CastMembers.Find(id); // get id
+            byte[] bytes = castMember.Photo; 
+            return File(bytes, "image/jpeg"); 
+        }
+```
 
 ### Interactive Search Bar
 For this story, I modified the [Index](#style-the-index-page) page to include an interactive search bar where the user can search Cast Members by their name or bio. As the user types, Cast Members that do not match any of the search terms are hidden from the view. This was accomplished by targeting the Id of the Search box and filtering the Cast Member cards and section dividers by class name using jQuery and the keyup event. 
