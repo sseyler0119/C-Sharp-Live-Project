@@ -1,0 +1,93 @@
+/* CSS color variables */
+:root {
+  /* Color palette for css */
+  --main-color: #db1a11; /* Red */
+  --main-color--light: #f04d44; /* Red, a shade lighter */
+  --secondary-color: #d6972a; /* Yellow gold */
+  --secondary-color--dark: #9d7c39; /* Dark Gold */
+  --light-color: #fffbfb; /* White */
+  --dark-color: #000000; /* Black */
+}
+
+/**************** About Us Page *****************/
+
+/* Containers */
+.Home-About--MainContainer {
+    background-color: var(--main-color--light);
+    margin: 0px;
+}
+
+.Home-About--TitleContainer {
+    background-image: url(../Content/images/theater.jpg);
+    background-attachment: fixed;
+    display: inline-block;
+    object-fit: contain;
+    height: 440px;
+    width: 100%;
+}
+
+.Home-About--AboutUsContainer {
+    background-color: var(--dark-color);
+    border-bottom-left-radius: 80px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.Home-About--HistoryContainer {
+    color: var(--light-color);
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 75px;
+}
+
+.Home-About--EnsembleContainer {
+    background-color: var(--dark-color);
+    border-top-right-radius: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Text Styling */
+.Home-About--TitleOverlay {
+    font-family: 'Broadway';
+    letter-spacing: 0.3vw;
+    color: var(--light-color) !important;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.Home-About--SectionHeadings{
+    padding-top: 35px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: var(--main-color);
+    text-align: center;
+    text-underline-offset: 0.2em;
+}
+
+.Home-About--Paragraph {
+    padding: 10px;
+    text-align: center;
+    max-width: 40em;
+    margin: auto;
+}
+
+.Home-About--Cast {
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+}
+
+.Home-About--CastCol {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.Home-About--SectionDivider {
+    border: 1px solid var(--light-color);
+    width: 95%;
+}
+
+/* End About Us Page Styling */
