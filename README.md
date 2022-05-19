@@ -12,13 +12,18 @@ I was tasked with creating a new About page for Theatre Vertigo. I created a new
 
 ## Production Area CRUD Pages:
 ### Style the Index Page
-The specifications for this story required that the “Create New” link is changed to a button and the Cast Members are displayed using Bootstrap cards that are sorted by the Production they are currently acting in. Each card includes an overlay that dims the photo as the user hovers over the image and displays Font Awesome icons for the Edit and Delete pages. The image is wrapped in a link that directs to the Details page. 
+The specifications for styling the [Index](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Index.cshtml) required that the “Create New” link is changed to a button and the Cast Members are displayed using Bootstrap cards that are sorted by the Production they are currently acting in. Each card includes an overlay that dims the photo as the user hovers over the image and displays Font Awesome icons for the Edit and Delete pages. The image is wrapped in a link that directs to the Details page. 
 ### Style the Create and Edit Pages
-For this story, I added a header above the form, styled the “Submit” and “Back to List” buttons to match the website theme, included placeholders for each input field, and centered the form on the page. When each input field is clicked, the border color and background color changes to match the provided color palette. 
+For the [Create]() and [Edit](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Edit.cshtml)  pages, I added a header above the form, styled the “Submit” and “Back to List” buttons to match the website theme, included placeholders for each input field, and centered the form on the page. When each input field is clicked, the border color and background color changes to match the provided color palette. 
 ### Style the Delete and Details Pages
-When styling these pages, I centered the content and made the Cast Member’s photo, name, and bio more prominent within the container. Links to “Edit”, “Back to List”, and “Delete” were changed into buttons with corresponding Font Awesome Icons that matched the color palette and include hover effects. 
+When styling the [Delete](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Delete.cshtml) and [Details](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Details.cshtml) pages, I centered the content and made the Cast Member’s photo, name, and bio more prominent within the container. Links to “Edit”, “Back to List”, and “Delete” were changed into buttons with corresponding Font Awesome Icons that matched the color palette and include hover effects. 
 ## Back-End Stories
 ### Create Entity Model and Scaffold the CRUD Pages
 I created an entity model for the CastMember class so that cast members could be created and saved to the database. I modeled the CastMember based on a provided schema that specified which properties should be nullable, and I created a Position enum for the MainRole property. After creating the model, I used update-database to migrate the changes and create a table in the database. Then I scaffolded the CRUD pages using Visual Studio and Entity Framework with the existing DbContext and _Layout.cshtml page from the main part of the project. 
 ### Photo Storage and Retrieval
+
+
+
+
+
 ### Interactive Search Bar
