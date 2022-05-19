@@ -62,6 +62,9 @@ namespace TheatreCMS3.Areas.Prod.Models
 ![Database Table](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/DatabaseTable.png)
 
 ### Photo Storage and Retrieval
+
+I modified the Create and Edit functions in the CastMember Controller to take in a parameter for an uploaded photo. This file is then passed to the UploadPhoto function where it is converted to a byte array. The RenderImage function converts the byte array back to an image and returns the image file to the web page to be displayed. 
+
 ```cs
         [HttpPost]
         [ValidateAntiForgeryToken]
