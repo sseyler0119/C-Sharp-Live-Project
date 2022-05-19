@@ -25,5 +25,24 @@ I created an entity model for the CastMember class so that cast members could be
 
 
 
-
 ### Interactive Search Bar
+
+```javascript
+/************************ Cast Member Index Page ************************/
+
+/* Search cast member name and bio for matching search term
+ * As the user types, remove non-matches from view
+ * Hide Production Title section headers when user starts to type
+*/
+$("#CastSearch").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $(".CastMember-Index--Card").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $(".CastMember-Index--SectionDivider").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+});
+
+/************************ end Cast Member Index Page ************************/
+```
