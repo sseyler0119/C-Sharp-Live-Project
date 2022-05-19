@@ -5,10 +5,10 @@
 This project is built using ASP.NET MVC and Entity Framework. I was part of a Scrum team for a two-week code sprint where we worked on an interactive website for managing the content and productions for a theater/acting company in Portland, Oregon called Theatre Vertigo. This site was intended to be a content management service for non-technical staff to manage their website content.  My team and I worked on the Production Area of the website where all productions, production photos, and cast member information is contained. 
 
 ## Front-End Stories
-All front-end stories include the color-palette provided by Theatre Vertigo and are designed to blend with the main portion of the website. Button styles, containers, and hover effects match those used in other areas of the website for consistency.
+All front-end stories include the color-palette provided by Theatre Vertigo and are designed to blend with the main portion of the website. Button styles, containers, and hover effects match those used in other areas of the website for consistency. 
 
 ### Style the About page (Main Site)
-I was tasked with creating a new [About](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/About.cshtml) page for Theatre Vertigo. I created a new view in the Home View folder for the About page and then used a mockup that was supplied by another UI/UX developer to recreate their design using HTML and CSS. 
+I was tasked with creating a new [About](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/About.cshtml) page for Theatre Vertigo. I created a new view in the Home View folder for the About page and then used a mockup that was supplied by another UI/UX developer to recreate their design using HTML and [CSS](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Site.css). 
 
 ![About Page](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/About%20-%20My%20ASP.NET%20Application.gif)
 
@@ -20,6 +20,8 @@ The specifications for styling the [Index](https://github.com/sseyler0119/C-Shar
 For the [Create](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Create.cshtml) and [Edit](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Edit.cshtml)  pages, I added a header above the form, styled the “Submit” and “Back to List” buttons to match the website theme, included placeholders for each input field, and centered the form on the page. When each input field is clicked, the border color and background color changes to match the provided color palette. 
 ### Style the Delete and Details Pages
 When styling the [Delete](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Delete.cshtml) and [Details](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Details.cshtml) pages, I centered the content and made the Cast Member’s photo, name, and bio more prominent within the container. Links to “Edit”, “Back to List”, and “Delete” were changed into buttons with corresponding Font Awesome Icons that matched the color palette and include hover effects. 
+![Edit and Details](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/Edit%20and%20Details%20.gif)
+![Delete](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/Delete%20-%20My%20ASP.NET%20Application.gif)
 ## Back-End Stories
 ### Create Entity Model and Scaffold the CRUD Pages
 I created an entity model for the CastMember class so that cast members could be created and saved to the database. I modeled the CastMember based on a provided schema that specified which properties should be nullable, and I created a Position enum for the MainRole property. After creating the model, I used update-database to migrate the changes and create a table in the database. Then I scaffolded the CRUD pages using Visual Studio and Entity Framework with the existing DbContext and _Layout.cshtml page from the main part of the project. 
