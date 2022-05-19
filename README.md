@@ -21,10 +21,42 @@ For the [Create](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master
 ### Style the Delete and Details Pages
 When styling the [Delete](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Delete.cshtml) and [Details](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/Files/Details.cshtml) pages, I centered the content and made the Cast Member’s photo, name, and bio more prominent within the container. Links to “Edit”, “Back to List”, and “Delete” were changed into buttons with corresponding Font Awesome Icons that matched the color palette and include hover effects. 
 ![Edit and Details](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/Edit%20and%20Details%20.gif)
+
 ![Delete](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/Delete%20-%20My%20ASP.NET%20Application.gif)
+
 ## Back-End Stories
 ### Create Entity Model and Scaffold the CRUD Pages
 I created an entity model for the CastMember class so that cast members could be created and saved to the database. I modeled the CastMember based on a provided schema that specified which properties should be nullable, and I created a Position enum for the MainRole property. After creating the model, I used update-database to migrate the changes and create a table in the database. Then I scaffolded the CRUD pages using Visual Studio and Entity Framework with the existing DbContext and _Layout.cshtml page from the main part of the project. 
+```cs
+
+namespace TheatreCMS3.Areas.Prod.Models
+{
+    // Position enum for MainRole property
+    public enum Position
+    {
+        Actor,
+        Director,
+        Technician,
+        StageManager,
+        Other
+    }
+    public class CastMember
+    {
+        public int CastMemberId { get; set; }
+        public string Name { get; set; }
+        public int? YearJoined { get; set; }
+        public Position MainRole { get; set; }
+        public string Bio { get; set; }
+        public byte[] Photo { get; set; }
+        public bool CurrentMember { get; set; }
+        public string ProductionTitle { get; set; }
+        public string Character { get; set; }
+        public int? CastYearLeft { get; set; }
+        public int? DebutYear { get; set; }
+    }
+}
+```
+![Database Table](https://github.com/sseyler0119/C-Sharp-Live-Project/blob/master/img/DatabaseTable.png)
 ### Photo Storage and Retrieval
 
 ### Interactive Search Bar
