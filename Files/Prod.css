@@ -235,7 +235,7 @@
     color: var(--main-color);
 }
     
-CastMember-Delete--Icon[i] {
+.CastMember-Delete--Icon[i] {
     color: var(--light-color);
 }
 
